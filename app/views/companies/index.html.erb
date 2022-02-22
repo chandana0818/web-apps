@@ -1,7 +1,10 @@
-<% companies = Company.all %>
-<h1>Companies</h1>
+
+<h1>My CRM</h1>
+ 
 <ul>
-  <% for company in companies %>
-    <li><%= company.name %> – <%= company.city %>, <%= company.state %></li>
+  <% for company in @companies %>
+    <li>
+      <a href="/companies/<%= company.id %>"><%= company.name %></a>
+    </li>
   <% end %>
 </ul>
